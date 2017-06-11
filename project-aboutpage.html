@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang=“en-US”>
+<head>
+<style>
+
+.container {
+    overflow: hidden;
+    background-color: lightcoral;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+
+.more-photos {
+
+	float: left;
+    overflow: hidden;
+    }
+    
+.more-photos .dropbtn {
+	cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 12px 16px;
+    background-color: inherit;
+    text-align: center;
+    }
+    
+    
+.container a:hover, .more-photos:hover .dropbtn {
+	background-color: Indianred; }
+    
+    
+.more-photos-content {
+	display: none;
+    position: absolute;
+    backgrond-color: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+    
+    
+.more-photos-content a {
+	float: none;
+    color: lightcoral;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+ }
+ 
+ 
+.more-photos-content a:hover {
+background-color: Indianred;
+}
+
+
+.show {
+	display: block;
+}
+
+
+body {background-color: antiquewhite;}
+
+h2 {color: lightcoral;}
+
+#information-1 {color: lightcoral;}
+
+<title>Bryan's World</title>
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <div class="more-photos">
+    <button class="dropbtn" onclick="myFunction()">More Photos</button>
+    <div class="more-photos-content" id="myDropdown">
+      <a href="#">Category 1</a>
+      <a href="#">Category 2</a>
+      <a href="#">Category 3</a>
+  </div>
+  </div>
+  </div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+
+<h1>This is Bryan's World</h1>
+<p>Welcome into this world of business and fun. <br><br>I hope you enjoy this journey</p>
+
+<br><h2>Outdoor Pictures</h2>
+
+<img src="https://i.imgur.com/Bq8UDVL.jpg" alt="Closed Rose" width="500" height="400">
+
+<img src="http://i.imgur.com/HWXpjio.jpg" alt="Palm Trees at Beach" width="500" height="400">
+
+<img src="http://i.imgur.com/81Bsa57.jpg" alt="Park in New York near big lake" width="500" height="400">
+
+<p id="information-1"><strong>So as you can see above, these are all pictures taken by me; Bryan. I have a lot more to show you, but that'll be at a later time. Just enjoy these in the meantime :)</strong></p>
+
+</body>
+</html>
