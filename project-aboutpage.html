@@ -4,6 +4,13 @@
 <head>
 <style>
 
+img {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+
 .container {
     overflow: hidden;
     background-color: lightcoral;
@@ -11,19 +18,19 @@
 }
 
 .container a {
-    float: left;
     font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    display: inline-block;
 }
   
 
 .more-photos {
-
-	float: left;
+	text-align: center;
     overflow: hidden;
+	display: inline-block;
     }
     
 .more-photos .dropbtn {
@@ -32,20 +39,24 @@
     border: none;
     outline: none;
     color: white;
-    padding: 12px 16px;
+    padding: 14px 16px;
+    margin: 0px 0px;
     background-color: inherit;
-    text-align: center;
     }
     
     
 .container a:hover, .more-photos:hover .dropbtn {
 	background-color: Indianred; }
+
+
+.more-photos.dropdown {
+	display: inline-block; }
     
     
 .more-photos-content {
 	display: none;
     position: absolute;
-    backgrond-color: none;
+    background-color: lightcoral;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -54,11 +65,10 @@
     
 .more-photos-content a {
 	float: none;
-    color: lightcoral;
+    color: white;
     padding: 14px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
  }
  
  
@@ -67,16 +77,23 @@ background-color: Indianred;
 }
 
 
-.show {
-	display: block;
+.more-photos {
+	display: inline-block;
 }
 
 
 body {background-color: antiquewhite;}
 
-h2 {color: lightcoral;}
+h1 {text-align: center;
+ 	}
 
-#information-1 {color: lightcoral;}
+h2 {color: lightcoral;
+	text-align: center;}
+
+#information-1 {color: lightcoral;
+		text-align: center;}
+
+#welcome {text-align: center;}
 
 <title>Bryan's World</title>
 
@@ -91,9 +108,9 @@ h2 {color: lightcoral;}
   <div class="more-photos">
     <button class="dropbtn" onclick="myFunction()">More Photos</button>
     <div class="more-photos-content" id="myDropdown">
-      <a href="#">Category 1</a>
-      <a href="#">Category 2</a>
-      <a href="#">Category 3</a>
+      <a href="#">Outdoor</a>
+      <a href="#">Wedding</a>
+      <a href="#">Seasonal</a>
   </div>
   </div>
   </div>
@@ -101,22 +118,22 @@ h2 {color: lightcoral;}
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("more-photos");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
   if (!e.target.matches('.dropbtn')) {
     var myDropdown = document.getElementById("myDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
+      if (myDropdown.classList.contains('more-photos')) {
+        myDropdown.classList.remove('more-photos');
       }
   }
 }
 </script>
 
 <h1>This is Bryan's World</h1>
-<p>Welcome into this world of business and fun. <br><br>I hope you enjoy this journey</p>
+<p id="welcome">Welcome into this world of business and fun. <br><br>I hope you enjoy this journey</p>
 
 <br><h2>Outdoor Pictures</h2>
 
