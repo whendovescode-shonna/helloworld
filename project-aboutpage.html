@@ -25,14 +25,14 @@ img {
     text-decoration: none;
     display: inline-block;
 }
-  
+
 
 .more-photos {
 	text-align: center;
     overflow: hidden;
 	display: inline-block;}
-    
-    
+
+
 .more-photos .dropbtn {
 	cursor: pointer;
     font-size: 16px;
@@ -43,8 +43,8 @@ img {
     margin: 0px 0px;
     background-color: inherit;
     }
-    
-    
+
+
 .container a:hover, .more-photos:hover {
     background-color: Indianred;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
@@ -52,18 +52,20 @@ img {
 
 .more-photos.dropdown {
 	display: inline-block; }
-    
-    
+
+
 .more-photos-content {
-	display: none;
+	  display: none;
+    top: 55px;
+    left: 257px;
     position: absolute;
     background-color: lightcoral;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     }
-    
-    
+
+
 .more-photos-content a {
 	float: none;
     color: white;
@@ -71,8 +73,8 @@ img {
     text-decoration: none;
     display: block;
  }
- 
- 
+
+
 .more-photos-content a:hover {
 background-color: Indianred;
 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -128,7 +130,7 @@ h2 {color: lightcoral;
   </div>
   </div>
 <script>
-/* When the user clicks on the button, 
+/* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("more-photos");
